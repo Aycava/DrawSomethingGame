@@ -1,0 +1,79 @@
+body, html {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: whitesmoke;
+    background-color: lightblue;
+    background-image: url("https://static.vecteezy.com/system/resources/previews/003/975/462/non_2x/geometric-seamless-pattern-of-corners-and-circles-marine-motif-seamless-abstract-pattern-in-blue-tones-free-vector.jpg");
+    background-repeat: repeat-x;
+    background-size: 460px;
+    background-position-y: 50px;
+}
+
+.logo_main {
+    justify-content: center;
+    padding-top: 30px;
+    display: flex;
+}
+
+.logo_center {
+    width: 250px;
+    height: auto;
+}
+
+.play_button {
+    width: 300px;
+    height: 75px;
+    font-size: 2em;
+    background-color: deepskyblue;
+    color: whitesmoke;
+
+}
+
+.button_center {
+    justify-content: center;
+    display: flex;
+    padding-top: 110px;
+
+}
+
+.bottom_container {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    flex-direction: row;
+}
+
+.bottom_panel {
+    font: inherit;
+    position: relative;
+    width: 50%;
+    background-color: blue;
+    margin: 10px auto;
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+.bottom_panel h2 {
+    width: 100%;
+    text-align: center;
+}
+
+
+.middle {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 500px;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    background-color: cadetblue;
+}
