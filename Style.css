@@ -1,14 +1,28 @@
+@import url('https://fontmeme.com/assets/sidebar-bg296.png');
+
 body, html {
     height: 100%;
     padding: 0;
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: "Comic Sans MS" , sans-serif;
     color: whitesmoke;
-    background-color: lightblue;
-    background-image: url("https://static.vecteezy.com/system/resources/previews/003/975/462/non_2x/geometric-seamless-pattern-of-corners-and-circles-marine-motif-seamless-abstract-pattern-in-blue-tones-free-vector.jpg");
-    background-repeat: repeat-x;
-    background-size: 460px;
-    background-position-y: 50px;
+    background-color: darkblue;
+}
+
+.navbar {
+    width: 100%;
+    height: 40px;
+    background-color: white;
+    outline-width: 5px;
+    border-bottom: 2px black;
+}
+
+.nav_logo {
+
+}
+
+.nav_element {
+
 }
 
 .logo_main {
@@ -28,21 +42,22 @@ body, html {
     font-size: 2em;
     background-color: deepskyblue;
     color: whitesmoke;
-
+    font-family: inherit;
+    font-weight: bold;
+    margin-bottom: 100px;
 }
 
 .button_center {
-    justify-content: center;
     display: flex;
     padding-top: 110px;
-
+    margin: auto;
 }
 
 .bottom_container {
     display: flex;
     align-items: flex-start;
     width: 100%;
-    flex-direction: row;
+    flex-direction: column;
 }
 
 .bottom_panel {
@@ -59,6 +74,9 @@ body, html {
     width: 100%;
     text-align: center;
 }
+.bottom_panel b {
+
+}
 
 
 .middle {
@@ -66,6 +84,7 @@ body, html {
     flex-direction: column;
     width: 100%;
     height: 500px;
+
 }
 
 .footer {
@@ -75,5 +94,126 @@ body, html {
     padding-top: 10px;
     padding-bottom: 10px;
     width: 100%;
-    background-color: cadetblue;
+}
+
+.final_pictures {
+    display: flex;
+    align-items: flex-start;
+    width: 75%;
+    flex-direction: row;
+    margin: auto;
+
+}
+
+.picture {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    margin: 20px;
+    flex-direction: column;
+    background-color: blue;
+
+}
+
+.big_picture {
+    width: 50%;
+    height: 250px;
+    margin: auto;
+    background-color: blue;
+}
+
+#FinalPage .big_picture {
+    margin-top: 100px;
+}
+
+.pictures {
+    width: 100%;
+    margin-top: 30px;
+}
+
+#FinalPage h2, #FinalPage b {
+    text-align: center;
+    width: 100%;
+    margin: auto;
+}
+
+.right_button {
+
+}
+
+.left_button {
+
+}
+
+.toggle_button {
+    width: 300px;
+    height: 75px;
+    font-size: 2em;
+    background-color: deepskyblue;
+    color: whitesmoke;
+    font-family: inherit;
+    font-weight: bold;
+    margin: auto;
+}
+
+
+.hide {
+    margin: auto;
+    display: none;
+}
+
+.submit_button {
+    width: 300px;
+    height: 75px;
+    font-size: 2em;
+    background-color: deepskyblue;
+    color: whitesmoke;
+    font-family: inherit;
+    font-weight: bold;
+    margin: auto;
+}
+
+.container {
+    width: 75%;
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    margin: 100px auto auto;
+}
+
+#toolbar {
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    height: 70px;
+    background-color: #202020;
+}
+
+#toolbar * {
+    margin-bottom: 6px;
+    padding: 10px;
+}
+
+#toolbar label {
+    font-size: 12px;
+}
+
+#toolbar input {
+    height: 100%;
+    width: 35px;
+}
+
+#toolbar button {
+    background-color: #1565C0;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    padding: 2px;
+}
+
+#clock {
+    text-align: right;
+    margin-right: 30px;
+    color: black;
 }

@@ -11,10 +11,12 @@
         <div class="logo_main">
             <img src="https://www.adaptivewfs.com/wp-content/uploads/2020/07/logo-placeholder-image.png" class="logo_center">
         </div>
-        <div class="button_center">
-            <button class="play_button">
-                <span data-translate="text">Play</span>
-            </button>
+        <button id="toggle_button">Play</button>
+        <div id="collection" class="hide">
+            <input type="number" id="time" placeholder="Time Per Drawing">
+            <input type="number" id="number" placeholder="Number of Drawings">
+            <button id="submit_button">Continue</button>
+            <button id="clear">clear</button>
         </div>
     </div>
 
@@ -30,4 +32,25 @@
         </div>
     </div>
 </body>
+
+<script>
+    document.getElementById("toggle_button").addEventListener("click", function () {
+        this.style.display = 'none';
+        document.getElementById('collection').style.display = 'block';
+    });
+    document.getElementById("submit_button").addEventListener("click", function () {
+        const time = document.getElementById("time").value;
+        const number = document.getElementById("number").value;
+        localStorage.setItem("time", time);
+        localStorage.setItem("drawing_number", number);
+        start_drawing();
+        window.location.href = "DrawingPage.html";
+    });
+    document.getElementById('clear').addEventListener('click',function() {
+        localStorage.clear();
+    });
+</script>
+<script src="Timer.js"></script>
+<script src="game.js"></script>
+<script src="DrawingCanvas.js"></script>
 </html>

@@ -7,6 +7,20 @@
 <body>
     <h1>Draw Something</h1>
     <b>Would you like to continue to the next round of drawing?</b>
+    <button id="yes">Yes</button>
+    <button id="no">no</button>
 
 </body>
+<script>
+    document.getElementById("yes").addEventListener("click", function() {
+        window.location.href = "DrawingPage.html";
+        start_drawing();
+
+});
+    document.getElementById("no").addEventListener("click", function() {
+    window.location.href = "FinalPage.html"
+    });
+</script>
+<script src="game.js"></script>
+<script src="Timer.js"></script>
 </html>

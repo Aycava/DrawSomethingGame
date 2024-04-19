@@ -3,9 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <title>DrawSomething</title>
+    <link rel="stylesheet" href="Style.css">
 </head>
 <body>
-    <h1>THANK YOU FOR PLAYING</h1>
-    <b>Press the button below to replay the game with your previously specified settings!</b>
+    <div class="navbar"></div>
+    <div class="pictures">
+        <div class="big_picture">
+            <b>testing</b>
+        </div>
+        <div class="final_pictures">
+            <button id="prev">prev</button>
+            <div class="picture">
+                <b>testing</b>
+            </div>
+            <div class="picture">
+                <b>testing</b>
+            </div>
+            <div class="picture">
+                <b>testing</b>
+            </div>
+            <button id="next">next</button>
+        </div>
+    </div>
+
+    <div class="bottom_container">
+        <div class="bottom_panel">
+            <h2>THANK YOU FOR PLAYING</h2>
+            <b>Press the button below to replay the game with your previously specified settings!</b>
+        </div>
+            <div class="button_center">
+                <button id="play_button" class="play_button">
+                    <span data-translate="text">Play</span>
+                </button>
+            </div>
+    </div>
 </body>
+
+<script>
+    function load_image(imgURL) {
+        const image = new Image();
+        image.src = imgURL;
+
+    }
+    document.getElementById("next").addEventListener("click", function() {
+        const image = new Image();
+
+    });
+</script>
 </html>
