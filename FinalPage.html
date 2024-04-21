@@ -8,20 +8,20 @@
 <body>
     <div class="navbar"></div>
     <div class="pictures">
-        <div class="big_picture">
-            <b>testing</b>
-        </div>
+        <picture id="big_picture" class="big_picture">
+            <img id="bigImage" src="">
+        </picture>
         <div class="final_pictures">
             <button id="prev">prev</button>
-            <div class="picture">
-                <b>testing</b>
-            </div>
-            <div class="picture">
-                <b>testing</b>
-            </div>
-            <div class="picture">
-                <b>testing</b>
-            </div>
+            <picture id="pic1" class="picture">
+                <img src="">
+            </picture>
+            <picture id="pic2" class="picture">
+                <img src="">
+            </picture>
+            <picture id="pic3" class="picture">
+                <img src="">
+            </picture>
             <button id="next">next</button>
         </div>
     </div>
@@ -38,16 +38,14 @@
             </div>
     </div>
 </body>
-
+<script src="ImageDisplay.js"></script>
 <script>
-    function load_image(imgURL) {
-        const image = new Image();
-        image.src = imgURL;
-
-    }
-    document.getElementById("next").addEventListener("click", function() {
-        const image = new Image();
-
-    });
+    bigImageInit();
+    updateImages();
+    document.getElementById("next").addEventListener("click", next);
+    document.getElementById("prev").addEventListener("click", prev);
+    document.getElementById("pic1").addEventListener("click", show);
+    document.getElementById("pic2").addEventListener("click", show);
+    document.getElementById("pic3").addEventListener("click", show);
 </script>
 </html>

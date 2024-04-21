@@ -1,4 +1,6 @@
 let currentDrawing = 0;
+let savedPictures = [];
+
 const numberOfDrawings = parseInt(localStorage.getItem('drawing_number'));
 let game_clock = setInterval(tick, 1000);
 //using this method for persistence, I want the drawings to still exist if the session is reset
@@ -36,7 +38,7 @@ function done_drawing() {
 }
 
 function load_drawing(d_index) {
-    const curURL = localStorage.getItem('drawing' + d_index);
+    const curURL = savedPictures[currentDrawing];
 
     if (curURL) {
         const img = new Image();
@@ -56,7 +58,8 @@ function load_drawing(d_index) {
 
 function save_drawing() {
     const picURL = canvas.toDataURL('image/png');
-    localStorage.setItem('drawing' + currentDrawing, picURL);
+    savedPictures.push(picURL);
+    localStorage.setItem('savedPictures', JSON.stringify(savedPictures));
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 }
 

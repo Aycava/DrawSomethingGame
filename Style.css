@@ -98,7 +98,8 @@ body, html {
 
 .final_pictures {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: center;
     width: 75%;
     flex-direction: row;
     margin: auto;
@@ -106,30 +107,44 @@ body, html {
 }
 
 .picture {
-    width: 100%;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     display: flex;
     margin: 20px;
     flex-direction: column;
-    background-color: blue;
+
+}
+
+.picture img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    background-color: white;
+}
+
+.big_picture img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    background-color: white;
 
 }
 
 .big_picture {
-    width: 50%;
-    height: 250px;
+    width: 300px;
+    height: auto;
     margin: auto;
-    background-color: blue;
-}
-
-#FinalPage .big_picture {
-    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .pictures {
-    width: 100%;
     margin-top: 30px;
 }
+
+
+
 
 #FinalPage h2, #FinalPage b {
     text-align: center;
@@ -217,3 +232,4 @@ body, html {
     margin-right: 30px;
     color: black;
 }
+
