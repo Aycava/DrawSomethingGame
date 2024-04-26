@@ -25,5 +25,8 @@ function tick() {
 function reset() {
     current_time = countdown;
     next_drawing();
+    canvasStates.length = 0;
+    currentState = 0;
+    logCanvasState();
 }
 

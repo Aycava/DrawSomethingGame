@@ -10,6 +10,7 @@
 <div class="navbar"></div>
 <section id="container" class="container">
     <p id="clock"></p>
+    <p id="topic"></p>
     <div class="drawing_board">
         <canvas id="drawing_board"></canvas>
     </div>
@@ -18,13 +19,27 @@
         <input id="stroke" name='stroke' type="color">
         <label for="lineWidth">Line Width</label>
         <input id="lineWidth" name='lineWidth' type="number" value="5">
+        <button id="pen">pen</button>
+        <button id="eraser">eraser</button>
+        <button id="undo" name="undo">undo</button>
+        <button id="redo" name="redo">redo</button>
         <button id="clear">Clear</button>
     </div>
 </section>
-<script src="./DrawingCanvas.js"></script>
+<button id="nextDrawing">Next</button>
+<script src="DrawingCanvas.js"></script>
 <script src="Timer.js"></script>
 <script src="game.js"></script>
 <script>next_drawing();</script>
+<script>
+    canvas.addEventListener('mousemove', draw);
+    document.getElementById('undo').addEventListener('click', undo);
+    document.getElementById('redo').addEventListener('click', redo);
+    document.getElementById('pen').addEventListener('click', switchPen);
+    document.getElementById('eraser').addEventListener('click', switchEraser);
+    document.getElementById('nextDrawing').addEventListener('click', reset);
+    fillCanvas();
+</script>
 <script></script>
 </body>
 </html>

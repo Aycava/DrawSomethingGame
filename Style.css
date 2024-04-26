@@ -1,4 +1,3 @@
-@import url('https://fontmeme.com/assets/sidebar-bg296.png');
 
 body, html {
     height: 100%;
@@ -230,6 +229,11 @@ body, html {
 #clock {
     text-align: right;
     margin-right: 30px;
+    color: black;
+}
+
+#topic {
+    text-align: center;
     color: black;
 }
 
