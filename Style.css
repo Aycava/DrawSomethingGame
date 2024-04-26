@@ -4,24 +4,39 @@ body, html {
     padding: 0;
     margin: 0;
     font-family: "Comic Sans MS" , sans-serif;
-    color: whitesmoke;
-    background-color: darkblue;
+    color: #E0E2DB;
+    background-color: #2E3532;
 }
 
 .navbar {
     width: 100%;
-    height: 40px;
-    background-color: white;
+    height: 50px;
+    background-color: #8B2635;
+    display: flex;
+    align-items: center;
     outline-width: 5px;
-    border-bottom: 2px black;
+    border-bottom: 2px #2E3532;
 }
 
-.nav_logo {
+.nav_logo img {
+    height: 35px;
+    width: auto;
+}
 
+.nav_elements {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 .nav_element {
+    text-decoration: none;
+    color: inherit;
+    margin-left: 20px;
+}
 
+.nav_element:hover, .nav-logo:hover {
+    background-color: #691a26;
 }
 
 .logo_main {
@@ -35,22 +50,59 @@ body, html {
     height: auto;
 }
 
-.play_button {
+#toggle_button:hover {
+    background-color: #691a26;
+}
+
+#toggle_button {
+    display: inline-block;
     width: 300px;
     height: 75px;
     font-size: 2em;
-    background-color: deepskyblue;
-    color: whitesmoke;
+    background-color: #8B2635;
+    color: #E0E2DB;
     font-family: inherit;
     font-weight: bold;
-    margin-bottom: 100px;
+    margin: auto;
+    text-align: center;
+    border-radius: 15px;
 }
 
-.button_center {
-    display: flex;
-    padding-top: 110px;
-    margin: auto;
+#submit_button:hover {
+    background-color: #691a26;
 }
+
+#submit_button {
+    display: inline-block;
+    width: 100px;
+    height: 25px;
+    background-color: #8B2635;
+    color: #E0E2DB;
+    font-family: inherit;
+    font-weight: bold;
+    margin: auto;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.continue_button:hover {
+    background-color: #691a26;
+}
+
+.continue_button {
+    display: inline-block;
+    width: 300px;
+    height: 75px;
+    font-size: 2em;
+    background-color: #8B2635;
+    color: #E0E2DB;
+    font-family: inherit;
+    font-weight: bold;
+    margin: auto;
+    text-align: center;
+    border-radius: 15px;
+}
+
 
 .bottom_container {
     display: flex;
@@ -59,24 +111,32 @@ body, html {
     flex-direction: column;
 }
 
+.clickable {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.clickable:hover .bottom_panel {
+    background-color: #691a26;
+}
+
 .bottom_panel {
     font: inherit;
     position: relative;
-    width: 50%;
-    background-color: blue;
+    width: 30%;
+    background-color: #8B2635;
     margin: 10px auto;
     max-height: 250px;
     overflow-y: auto;
+    border-radius: 15px;
+    padding: 20px;
 }
 
 .bottom_panel h2 {
     width: 100%;
     text-align: center;
 }
-.bottom_panel b {
-
-}
-
 
 .middle {
     display: flex;
@@ -142,49 +202,32 @@ body, html {
     margin-top: 30px;
 }
 
-
-
-
 #FinalPage h2, #FinalPage b {
     text-align: center;
     width: 100%;
     margin: auto;
 }
 
-.right_button {
-
+#next:hover, #prev:hover {
+    background-color: #691a26;
 }
 
-.left_button {
-
-}
-
-.toggle_button {
-    width: 300px;
-    height: 75px;
-    font-size: 2em;
-    background-color: deepskyblue;
-    color: whitesmoke;
+#next, #prev {
+    display: inline-block;
+    width: 100px;
+    height: 25px;
+    background-color: #8B2635;
+    color: #E0E2DB;
     font-family: inherit;
     font-weight: bold;
-    margin: auto;
+    margin-bottom: 90px;
+    text-align: center;
+    border-radius: 15px;
 }
-
 
 .hide {
     margin: auto;
     display: none;
-}
-
-.submit_button {
-    width: 300px;
-    height: 75px;
-    font-size: 2em;
-    background-color: deepskyblue;
-    color: whitesmoke;
-    font-family: inherit;
-    font-weight: bold;
-    margin: auto;
 }
 
 .container {
@@ -193,7 +236,7 @@ body, html {
     display: flex;
     flex-direction: column;
     background: white;
-    margin: 100px auto auto;
+    margin: 50px auto auto;
 }
 
 #toolbar {
@@ -210,7 +253,7 @@ body, html {
 }
 
 #toolbar label {
-    font-size: 12px;
+    font-size: 8px;
 }
 
 #toolbar input {
@@ -219,21 +262,34 @@ body, html {
 }
 
 #toolbar button {
-    background-color: #1565C0;
+    background-color: #2E3532;
     border: none;
-    border-radius: 4px;
-    color: white;
+    color: #8B2635;
     padding: 2px;
 }
 
+#drawing_board {
+    width: 100%;
+    overflow: hidden;
+}
+
+.top_container {
+    display: flex;
+    align-items: center;
+    background: #2E3532;
+}
 #clock {
+    background: #8B2635;
+    padding: 5px 10px;
     text-align: right;
-    margin-right: 30px;
-    color: black;
+    border-radius: 5px;
+    color: #2E3532;
 }
 
 #topic {
+    background: #8B2635;
+    padding: 5px 10px;
     text-align: center;
-    color: black;
+    color: #2E3532;
 }
 

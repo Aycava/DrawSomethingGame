@@ -6,7 +6,16 @@
     <link rel="stylesheet" href="Style.css">
 </head>
 <body>
-    <div class="navbar"></div>
+    <div class="navbar">
+        <a href="index.html" class="nav_logo">
+            <img src="https://cdn.discordapp.com/attachments/1208174293725483078/1233294524097237042/IMG_0259.png?ex=662c9288&is=662b4108&hm=641e353fce9447b125bcbef7ee3624628a1d9c84cb51287c64e8992995b0a84e&" />
+        </a>
+        <div class="nav_elements">
+            <a href="About.html" class="nav_element">About</a>
+            <a href="Tutorial.html" class="nav_element">Tutorial</a>
+        </div>
+
+    </div>
     <div class="pictures">
         <picture id="big_picture" class="big_picture">
             <img id="bigImage" src="">
@@ -31,14 +40,14 @@
             <h2>THANK YOU FOR PLAYING</h2>
             <b>Press the button below to replay the game with your previously specified settings!</b>
         </div>
-            <div class="button_center">
-                <button id="play_button" class="play_button">
-                    <span data-translate="text">Play</span>
-                </button>
-            </div>
+        <button id="toggle_button" class="toggle_button">
+            <span data-translate="text">Play</span>
+        </button>
+
     </div>
 </body>
 <script src="ImageDisplay.js"></script>
+<script src="game.js"></script>
 <script>
     bigImageInit();
     updateImages();
@@ -47,5 +56,14 @@
     document.getElementById("pic1").addEventListener("click", show);
     document.getElementById("pic2").addEventListener("click", show);
     document.getElementById("pic3").addEventListener("click", show);
+    document.getElementById("toggle_button").addEventListener("click", function() {
+        const time_copy = localStorage.getItem("time");
+        const drawing_copy = localStorage.getItem("drawing_number");
+        localStorage.clear();
+        localStorage.setItem("time", time_copy);
+        localStorage.setItem("drawing_number", drawing_copy);
+        window.location.href = "DrawingPage.html";
+        start_drawing();
+    });
 </script>
 </html>

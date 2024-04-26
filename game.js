@@ -28,7 +28,10 @@ const topics = [
 const numberOfDrawings = parseInt(localStorage.getItem('drawing_number'));
 let game_clock = setInterval(tick, 1000);
 let selectedTopics = [];
-getTopics();
+if (selectedTopics.length === 0)
+{
+    getTopics();
+}
 //using this method for persistence, I want the drawings to still exist if the session is reset
 let final_drawings = new Array(numberOfDrawings);
 function start_drawing() {
