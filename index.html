@@ -47,10 +47,12 @@
 </body>
 
 <script>
+    //play button reveals data collection and continue button
     document.getElementById("toggle_button").addEventListener("click", function () {
         this.style.display = 'none';
         document.getElementById('collection').style.display = 'block';
     });
+    //continue button stores necessary data and initializes the game while sending the user to the drawing page
     document.getElementById("submit_button").addEventListener("click", function () {
         const time = document.getElementById("time").value;
         const number = document.getElementById("number").value;

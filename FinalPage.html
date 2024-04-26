@@ -51,11 +51,6 @@
 <script>
     bigImageInit();
     updateImages();
-    document.getElementById("next").addEventListener("click", next);
-    document.getElementById("prev").addEventListener("click", prev);
-    document.getElementById("pic1").addEventListener("click", show);
-    document.getElementById("pic2").addEventListener("click", show);
-    document.getElementById("pic3").addEventListener("click", show);
     document.getElementById("toggle_button").addEventListener("click", function() {
         const time_copy = localStorage.getItem("time");
         const drawing_copy = localStorage.getItem("drawing_number");
