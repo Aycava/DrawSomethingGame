@@ -1,12 +1,12 @@
 //creates canvas and toolbar elements
-const canvas = document.getElementById('drawing_board');
+const canvas = document.getElementById('drawing-board');
 const toolbar = document.getElementById('toolbar');
 const ctx = canvas.getContext('2d');
 let canvasStates = [];
 let currentState;
 let currentTool;
 
-//function in case of resize to ensure canvas dimentions are secured
+//function to keep track of canvas offset
 function resizeCanvas() {
     const container = document.getElementById('container');
     canvas.width = container.offsetWidth;
@@ -21,10 +21,11 @@ let lineWidth = 5;
 let isPainting = false;
 let startX;
 let startY;
-//event listener for clear button, clears canvas
+//event listener for clear button, clears canvas, fills to make sure background is fully white
 toolbar.addEventListener('click', l => {
     if (l.target.id === 'clear') {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
+        fillCanvas();
     }
 });
 //manages changes in the stroke and linewidth toolbar functions

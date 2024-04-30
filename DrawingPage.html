@@ -8,22 +8,22 @@
 </head>
 <body>
 <div class="navbar">
-    <a href="index.html" class="nav_logo">
+    <a href="index.html" class="nav-logo">
         <img src="https://cdn.discordapp.com/attachments/1208174293725483078/1233294524097237042/IMG_0259.png?ex=662c9288&is=662b4108&hm=641e353fce9447b125bcbef7ee3624628a1d9c84cb51287c64e8992995b0a84e&" />
     </a>
-    <div class="nav_elements">
-        <a href="About.html" class="nav_element">About</a>
-        <a href="Tutorial.html" class="nav_element">Tutorial</a>
+    <div class="nav-elements">
+        <a href="About.html" class="nav-element">About</a>
+        <a href="Tutorial.html" class="nav-element">Tutorial</a>
     </div>
 
 </div>
 <section id="container" class="container">
-    <div class="top_container">
+    <div class="top-container">
         <p id="clock"></p>
         <p id="topic"></p>
     </div>
-    <div class="drawing_board">
-        <canvas id="drawing_board"></canvas>
+    <div class="drawing-board">
+        <canvas id="drawing-board"></canvas>
     </div>
     <div id="toolbar">
         <label for="stroke">Stroke</label>
@@ -42,6 +42,14 @@
 <script src="DrawingCanvas.js"></script>
 <script src="Timer.js"></script>
 <script src="game.js"></script>
+<script>
+    //if statement is intended to make sure we only get topics once per session
+    if(localStorage.getItem("topic1") == null)
+    {
+        getTopics();
+    }
+</script>
+
 <script>next_drawing();</script>
 <script>
     document.getElementById('nextDrawing').addEventListener('click', reset);

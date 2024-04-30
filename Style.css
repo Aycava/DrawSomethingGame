@@ -18,43 +18,43 @@ body, html {
     border-bottom: 2px #2E3532;
 }
 
-.nav_logo img {
+.nav-logo img {
     height: 35px;
     width: auto;
 }
 
-.nav_elements {
+.nav-elements {
     display: flex;
     justify-content: flex-end;
     align-items: center;
 }
 
-.nav_element {
+.nav-element {
     text-decoration: none;
     color: inherit;
     margin-left: 20px;
 }
 
-.nav_element:hover, .nav-logo:hover {
+.nav-element:hover, .nav-logo:hover {
     background-color: #691a26; /* making it noticably clickable when moused over */
 }
 
-.logo_main {
+.logo-main {
     justify-content: center;
     padding-top: 30px;
     display: flex;
 }
 
-.logo_center {
+.logo-center {
     width: 250px;
     height: auto;
 }
 
-#toggle_button:hover {
+#toggle-button:hover {
     background-color: #691a26;
 }
 
-#toggle_button, .continue_button {
+#toggle-button, .continue-button {
     display: inline-block;
     width: 300px;
     height: 75px;
@@ -68,11 +68,11 @@ body, html {
     border-radius: 15px;
 }
 
-#submit_button:hover {
+#submit-button:hover {
     background-color: #691a26;
 }
 
-#submit_button {
+#submit-button {
     display: inline-block;
     width: 100px;
     height: 25px;
@@ -85,11 +85,11 @@ body, html {
     border-radius: 15px;
 }
 
-.continue_button:hover {
+.continue-button:hover {
     background-color: #691a26;
 }
 
-.bottom_container {
+.bottom-container {
     display: flex;
     align-items: flex-start;
     width: 100%;
@@ -102,11 +102,11 @@ body, html {
     color: inherit; /* making text normal color */
 }
 
-.clickable:hover .bottom_panel {
+.clickable:hover .bottom-panel {
     background-color: #691a26;
 }
 
-.bottom_panel {
+.bottom-panel {
     font: inherit;
     position: relative;
     width: 30%;
@@ -118,7 +118,7 @@ body, html {
     padding: 20px;
 }
 
-.bottom_panel h2 {
+.bottom-panel h2 {
     width: 100%;
     text-align: center;
 }
@@ -140,7 +140,7 @@ body, html {
     width: 100%;
 }
 
-.final_pictures {
+.final-pictures {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -151,8 +151,8 @@ body, html {
 }
 
 .picture {
-    width: 200px;
-    height: 200px;
+    width: 400px;
+    height: 400px;
     display: flex;
     margin: 20px;
     flex-direction: column;
@@ -166,7 +166,7 @@ body, html {
     background-color: white;
 }
 
-.big_picture img {
+.big-picture img {
     max-width: 100%;
     max-height: 100%;
     object-fit: cover;
@@ -174,8 +174,8 @@ body, html {
 
 }
 
-.big_picture {
-    width: 300px;
+.big-picture {
+    width: 600px;
     height: auto;
     margin: auto;
     display: flex;
@@ -200,12 +200,12 @@ body, html {
 #next, #prev {
     display: inline-block;
     width: 100px;
-    height: 25px;
+    height: 50px;
     background-color: #8B2635;
     color: #E0E2DB;
     font-family: inherit;
     font-weight: bold;
-    margin-bottom: 90px;
+    margin-bottom: 200px;
     text-align: center;
     border-radius: 15px;
 }
@@ -232,18 +232,28 @@ body, html {
     background-color: #202020;
 }
 
+#toolbar button:hover {
+    background-color: #691a26;
+}
+
 #toolbar * {
     margin-bottom: 6px;
+    margin-left: 10px;
+    width: 5%;
     padding: 10px;
 }
 
 #toolbar label {
+    margin-top: 10px;
     font-size: 8px;
+    color: #8B2635;
+    width: 1%;
 }
 
 #toolbar input {
     height: 100%;
-    width: 35px;
+    width: 50px;
+
 }
 
 #toolbar button {
@@ -253,12 +263,12 @@ body, html {
     padding: 2px;
 }
 
-#drawing_board {
+#drawing-board {
     width: 100%;
     overflow: hidden;
 }
 
-.top_container {
+.top-container {
     display: flex;
     align-items: center;
     background: #2E3532;

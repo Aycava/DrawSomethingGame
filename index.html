@@ -8,37 +8,37 @@
 </head>
 <body>
     <div class="navbar">
-        <a href="index.html" class="nav_logo">
+        <a href="index.html" class="nav-logo">
             <img src="https://cdn.discordapp.com/attachments/1208174293725483078/1233294524097237042/IMG_0259.png?ex=662c9288&is=662b4108&hm=641e353fce9447b125bcbef7ee3624628a1d9c84cb51287c64e8992995b0a84e&" />
         </a>
         <div class="nav_elements">
-            <a href="About.html" class="nav_element">About</a>
-            <a href="Tutorial.html" class="nav_element">Tutorial</a>
+            <a href="About.html" class="nav-element">About</a>
+            <a href="Tutorial.html" class="nav-element">Tutorial</a>
         </div>
 
     </div>
     <div class="middle">
-        <div class="logo_main">
-            <img src="https://cdn.discordapp.com/attachments/1208174293725483078/1233294523631931423/IMG_0258.png?ex=662c9287&is=662b4107&hm=1e0133901f94583b221e4a8dbe912c0cdf8b71ade3a2554a40aa86f9015c0d25&" class="logo_center">
+        <div class="logo-main">
+            <img src="https://cdn.discordapp.com/attachments/1208174293725483078/1233294523631931423/IMG_0258.png?ex=662c9287&is=662b4107&hm=1e0133901f94583b221e4a8dbe912c0cdf8b71ade3a2554a40aa86f9015c0d25&" class="logo-center">
         </div>
-        <button id="toggle_button">Play</button>
+        <button id="toggle-button">Play</button>
         <div id="collection" class="hide">
-            <input class ="input_field" type="number" id="time" placeholder="Time Per Drawing">
-            <input class ="input_field" type="number" id="number" placeholder="Number of Drawings">
-            <button id="submit_button">Continue</button>
+            <input class ="input-field" type="number" id="time" placeholder="Time Per Drawing">
+            <input class ="input-field" type="number" id="number" placeholder="Number of Drawings">
+            <button id="submit-button">Continue</button>
         </div>
     </div>
 
     <div class="footer">
         <a href="Tutorial.html" class="clickable">
-            <div class="bottom_panel" id="tutorial">
+            <div class="bottom-panel" id="tutorial">
                 <h2>Tutorial</h2>
                 <b>Welcome to Draw Something, a drawing game focused on getting you to draw something. To start, press the big play button on the home screen. Then input the amount of time you want to spend per drawing, and the amount of drawings you want to do.... </b>
 
             </div>
         </a>
         <a href="About.html" class="clickable">
-            <div class="bottom_panel" id="about">
+            <div class="bottom-panel" id="about">
                 <h2>About</h2>
                 <b>Draw Something was specifically created for artists or aspiring artists who find trouble practicing their drawing skills due to a lack of ideas. It is intended to be used like a daily exercise to warm up your drawing "muscles"....</b>
             </div>
@@ -48,16 +48,16 @@
 
 <script>
     //play button reveals data collection and continue button
-    document.getElementById("toggle_button").addEventListener("click", function () {
+    document.getElementById("toggle-button").addEventListener("click", function () {
         this.style.display = 'none';
         document.getElementById('collection').style.display = 'block';
     });
     //continue button stores necessary data and initializes the game while sending the user to the drawing page
-    document.getElementById("submit_button").addEventListener("click", function () {
+    document.getElementById("submit-button").addEventListener("click", function () {
         const time = document.getElementById("time").value;
         const number = document.getElementById("number").value;
         localStorage.setItem("time", time);
-        localStorage.setItem("drawing_number", number);
+        localStorage.setItem("drawingNumber", number);
         window.location.href = "DrawingPage.html";
         start_drawing();
     });

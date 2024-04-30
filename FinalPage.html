@@ -7,20 +7,20 @@
 </head>
 <body>
     <div class="navbar">
-        <a href="index.html" class="nav_logo">
+        <a href="index.html" class="nav-logo" onclick="clearAndHome();">
             <img src="https://cdn.discordapp.com/attachments/1208174293725483078/1233294524097237042/IMG_0259.png?ex=662c9288&is=662b4108&hm=641e353fce9447b125bcbef7ee3624628a1d9c84cb51287c64e8992995b0a84e&" />
         </a>
-        <div class="nav_elements">
-            <a href="About.html" class="nav_element">About</a>
-            <a href="Tutorial.html" class="nav_element">Tutorial</a>
+        <div class="nav-elements">
+            <a href="About.html" class="nav-element">About</a>
+            <a href="Tutorial.html" class="nav-element">Tutorial</a>
         </div>
 
     </div>
     <div class="pictures">
-        <picture id="big_picture" class="big_picture">
-            <img id="bigImage" src="">
+        <picture id="big-picture" class="big-picture">
+            <img id="big-image" src="">
         </picture>
-        <div class="final_pictures">
+        <div class="final-pictures">
             <button id="prev">prev</button>
             <picture id="pic1" class="picture">
                 <img src="">
@@ -35,12 +35,12 @@
         </div>
     </div>
 
-    <div class="bottom_container">
-        <div class="bottom_panel">
+    <div class="bottom-container">
+        <div class="bottom-panel">
             <h2>THANK YOU FOR PLAYING</h2>
             <b>Press the button below to replay the game with your previously specified settings!</b>
         </div>
-        <button id="toggle_button" class="toggle_button">
+        <button id="toggle-button" class="toggle-button">
             <span data-translate="text">Play</span>
         </button>
 
@@ -51,14 +51,21 @@
 <script>
     bigImageInit();
     updateImages();
-    document.getElementById("toggle_button").addEventListener("click", function() {
-        const time_copy = localStorage.getItem("time");
-        const drawing_copy = localStorage.getItem("drawing_number");
+    //if the play button is hit we clear everything except for the time and number of drawings (by saving them during the clearing process) and initiate a new game
+    document.getElementById("toggle-button").addEventListener("click", function() {
+        const timeCopy = localStorage.getItem("time");
+        const drawingCopy = localStorage.getItem("drawingNumber");
         localStorage.clear();
-        localStorage.setItem("time", time_copy);
-        localStorage.setItem("drawing_number", drawing_copy);
+        localStorage.setItem("time", timeCopy);
+        localStorage.setItem("drawingNumber", drawingCopy);
         window.location.href = "DrawingPage.html";
         start_drawing();
     });
+    //if we click the logo to go home we make sure to clear the local storage so we can make a new game with no worries
+    function clearAndHome()
+    {
+        localStorage.clear();
+        window.location.href = "index.html"
+    }
 </script>
 </html>
