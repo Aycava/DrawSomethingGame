@@ -4,7 +4,7 @@ body, html {
     padding: 0;
     margin: 0;
     font-family: "Comic Sans MS" , sans-serif; /* sets font */
-    color: #E0E2DB;
+    color: black;
     background-color: #2E3532;
 }
 
@@ -46,7 +46,7 @@ body, html {
 }
 
 .logo-center {
-    width: 250px;
+    width: 500px;
     height: auto;
 }
 
@@ -60,7 +60,7 @@ body, html {
     height: 75px;
     font-size: 2em;
     background-color: #8B2635;
-    color: #E0E2DB;
+    color: black;
     font-family: inherit;
     font-weight: bold;
     margin: auto;
@@ -77,7 +77,7 @@ body, html {
     width: 100px;
     height: 25px;
     background-color: #8B2635;
-    color: #E0E2DB;
+    color: black;
     font-family: inherit;
     font-weight: bold;
     margin: auto;
@@ -202,7 +202,7 @@ body, html {
     width: 100px;
     height: 50px;
     background-color: #8B2635;
-    color: #E0E2DB;
+    color: black;
     font-family: inherit;
     font-weight: bold;
     margin-bottom: 200px;
